@@ -1,0 +1,40 @@
+.match {
+    background: white;
+    width: fit-content;
+    margin: 1rem;
+    color: black;
+    min-width: 400px;
+    h2 {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .match-header {
+        height: 40px;
+        background: #f4f4f4;
+        display: flex;
+        align-items: center;
+        p {
+            color: #989898;
+            margin-left: 1rem;
+        }
+    }
+    .match-body {
+        border: 1px solid #eee;
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            h2 {
+                color: #d0021b;
+            }
+        }
+    }
+}
+
+.match-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+

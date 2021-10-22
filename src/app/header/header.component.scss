@@ -1,0 +1,28 @@
+nav {
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    picture {
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    ul {
+        display: flex;
+
+        li {
+            font-size: 25px;
+            margin-right: 1rem;
+            a {
+                color: #494949;
+                font-weight: 600;
+                &:hover {
+                    color: #cccccc;
+                }
+            }
+        }
+    }
+}

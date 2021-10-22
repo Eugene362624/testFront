@@ -1,0 +1,78 @@
+<div class="add-match">
+    <h2>Добавить новый матч</h2>
+    <!-- <form [formGroup]="newMatchForm" (ngSubmit)="saveMatch(newMatchForm.value)" action="">
+        <label for="competition">Competition</label>
+        <input formControlName="competitionName" placeholder="Enter Competition" type="text">
+        <label for="season">Season</label>
+        <select formControlName="seasonName" title="Enter Season" name="" id="">
+            <option value="Pool A">Pool A</option>
+            <option value="Pool B">Pool B</option>
+            <option value="Pool C">Pool C</option>
+            <option value="Pool D">Pool D</option>
+            <option value="QF">QF</option>
+            <option value="SF">SF</option>
+            <option value="PO">PO</option>
+            <option value="Final">Final</option>
+            <option value="3rd Place Playoff">3rd Place Playoff</option>
+        </select>
+        <label for="homeTeamName">Home Team Name</label>
+        <input formControlName="homeTeamName" placeholder="Enter Home Team Name" type="text">
+        <label for="awayTeamName">Away Team Name</label>
+        <input formControlName="awayTeamName" placeholder="Enter Away Team Name" type="text">
+        <label for="score">Score</label>
+        <input formControlName="score" placeholder="Enter Score" type="text">
+        <label for="date">Date</label>
+        <input formControlName="date" placeholder="Enter Date" type="datetime-local">
+        <div class="btn-group">
+            <button [ibmButton]="ibmButton" [disabled]="newMatchForm.invalid">Добавить</button>
+            <button [ibmButton]="ibmButton" (click)="clearNewMatchForm()">Стереть</button>
+        </div>
+    </form> -->
+
+<form [formGroup]="newMatchForm" (ngSubmit)="saveMatch(newMatchForm.value)">
+    <ibm-label>
+        Competition
+        <input formControlName="competitionName" placeholder="Enter competition name" ibmText>
+    </ibm-label>
+    <ibm-label>
+        Season
+    </ibm-label>
+    <ibm-select formControlName="seasonName">
+        <option value="null" disabled selected>Choose an option</option>
+        <option value="Pool A">Pool A</option>
+        <option value="Pool B">Pool B</option>
+        <option value="Pool C">Pool C</option>
+        <option value="Pool D">Pool D</option>
+        <option value="QF">QF</option>
+        <option value="SF">SF</option>
+        <option value="PO">PO</option>
+        <option value="Final">Final</option>
+        <option value="3rd Place Playoff">3rd Place Playoff</option>
+    </ibm-select>
+    <ibm-label>
+        Home Team Name
+        <input formControlName="homeTeamName" ibmText placeholder="Enter home team name">
+    </ibm-label>
+    <ibm-label>
+        Away Team Name
+        <input formControlName="awayTeamName" ibmText placeholder="Enter away team name">
+    </ibm-label>
+    <ibm-label>
+        Score
+        <input formControlName="score" ibmText placeholder="Enter score">
+    </ibm-label>
+    <ibm-date-picker
+        label="Date"
+        language="ru"
+        formControlName="date"
+    >
+    </ibm-date-picker>
+    <div class="btn-group">
+            <button [ibmButton]="ibmButton" [disabled]="newMatchForm.invalid">Добавить</button>
+            <button [ibmButton]="ibmButton" (click)="clearNewMatchForm()">Стереть</button>
+        </div>
+</form>
+</div>
+
+
+<button style="margin-top: 1rem;" (click)="hideForm()" [ibmButton]="ibmButton">Назад</button>
