@@ -12,8 +12,16 @@ import { MatchSort } from './matches/matchSort/matchSort.component';
 import { MatchService } from './matches/shared/match.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
-import { ButtonModule, DatePickerModule, InputModule, SelectModule } from "carbon-components-angular";
+import {
+  ButtonModule,
+  DatePickerModule,
+  IconModule,
+  InputModule,
+  SelectModule
+} from 'carbon-components-angular';
 import { AddMatchComponent } from './admin/add-match/add-match.component';
+
+export let backend = "http://localhost:3000"
 
 @NgModule({
   declarations: [
@@ -22,7 +30,7 @@ import { AddMatchComponent } from './admin/add-match/add-match.component';
     AdminComponent,
     MatchesListComponent,
     MatchSort,
-    AddMatchComponent
+    AddMatchComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,11 +41,10 @@ import { AddMatchComponent } from './admin/add-match/add-match.component';
     ButtonModule,
     InputModule,
     SelectModule,
-    DatePickerModule
+    DatePickerModule,
+    IconModule
   ],
-  providers: [
-    MatchService
-  ],
-  bootstrap: [AppComponent]
+  providers: [MatchService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

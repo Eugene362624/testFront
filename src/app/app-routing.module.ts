@@ -5,14 +5,14 @@ import { AdminComponent } from './admin/admin.component';
 import { MatchesListComponent } from './matches/matches.component';
 
 const routes: Routes = [
-  {path: 'admin', component: AdminComponent},
-  {path: '', component: MatchesListComponent},
-  {path: 'sorted', component: MatchesListComponent},
-  {path: 'admin/add-match', component: AddMatchComponent}
+  { path: 'admin', component: AdminComponent },
+  { path: '', component: MatchesListComponent },
+  { path: 'sorted', component: MatchesListComponent },
+  { path: 'admin/add-match', component: AddMatchComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

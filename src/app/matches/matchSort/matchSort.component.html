@@ -1,27 +1,25 @@
 <div class="sort">
     <form [formGroup]="sortMatchForm">
-    <div class="sortBy">
-        <p>Sort by Competition</p>
-        <select formControlName="competitionName" #competition (change)="selectCompetition(competition.value)">
-            <option [ngValue]="null" disabled>Sort By Competition</option>
-            <option *ngFor="let competition of competitions" [ngValue]="competition.name">{{competition.name}}</option>
-        </select>
-    </div>
-    <div class="sortBy">
-        <p>Sort By Season</p>
-        <select formControlName="seasonName" #season (change)="selectSeason(season.value)" >
-            <option disabled>Sort By Season</option>
-            <option *ngFor="let season of seasons" [ngValue]="season">{{season}}</option>
-        </select>
-    </div>
-    <!-- <div class="sortBy">
-        <p>Sort By Date</p>
-        <div class="row">
-        <p>From</p>
-        <input  type="date">
-        <p>To</p>
-        <input  type="date">
-    </div>
-    </div> -->
+        <div class="sortBy">
+            <div class="icon">
+                <svg ibmIcon="menu" style="fill: white;" size="24" title="Hello!"></svg>
+            </div>
+            <select formControlName="competitionName" #competition (change)="selectCompetition(competition.value)">
+                <option [ngValue]="null" disabled>Sort By Competition</option>
+                <option *ngFor="let competition of competitions" [ngValue]="competition.name">{{competition.name}}
+                </option>
+            </select>
+            <div class="cleanUp"><button (click)="cleanUpCompetition()"><svg ibmIcon="close" size="24" title="Hello!"></svg></button></div>
+        </div>
+        <div class="sortBy">
+            <div class="icon">
+                <svg ibmIcon="earth" style="fill: white;" size="24" title="Hello!"></svg>
+            </div>
+            <select formControlName="seasonName" #season (change)="selectSeason(season.value)">
+                <option disabled [ngValue]="null">Sort By Season</option>
+                <option *ngFor="let season of seasons" [ngValue]="season">{{season}}</option>
+            </select>
+            <div class="cleanUp"><button (click)="cleanUpSeason()"><svg ibmIcon="close"  size="24" title="Hello!"></svg></button></div>
+        </div>
     </form>
 </div>

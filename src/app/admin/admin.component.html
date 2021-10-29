@@ -18,17 +18,20 @@
 <h6>Показывается по 10 шт на страницу</h6>
 <h4>Страница: {{page}} из {{maxPage}}</h4>
 <div *ngIf="!loading">
-<button style="margin-right: 1rem;" [ibmButton]="ibmButton" *ngIf="!(page == 1)" (click)="toThePrevPage()" title="go to the previous page">Предыдущая страница</button>
-<button style="margin-right: 1rem;" [ibmButton]="ibmButton" *ngIf="page == 1" disabled title="this page is the first page">Предыдущая страница</button>
-<button [ibmButton]="ibmButton" *ngIf="!(page == maxPage)" (click)="toTheNextPage()" title="go to the next page">Следующая страница</button>
-<button [ibmButton]="ibmButton" *ngIf="page == maxPage" disabled title="this page is the last page">Следующая страница</button>
+    <button style="margin-right: 1rem;" [ibmButton]="ibmButton" *ngIf="!(page == 1)" (click)="toThePrevPage()"
+        title="go to the previous page">Предыдущая страница</button>
+    <button style="margin-right: 1rem;" [ibmButton]="ibmButton" *ngIf="page == 1" disabled
+        title="this page is the first page">Предыдущая страница</button>
+    <button [ibmButton]="ibmButton" *ngIf="!(page == maxPage)" (click)="toTheNextPage()"
+        title="go to the next page">Следующая страница</button>
+    <button [ibmButton]="ibmButton" *ngIf="page == maxPage" disabled title="this page is the last page">Следующая страница</button>
 
 </div>
 <div *ngIf="loading">
-    
-<button [ibmButton]="ibmButton" disabled title="this page is the last page">загрузка...</button>
-<button style="margin-left: 1rem;" [ibmButton]="ibmButton" disabled title="this page is the first page">загрузка...</button>
+
+    <button [ibmButton]="ibmButton" disabled title="this page is the last page">загрузка...</button>
+    <button style="margin-left: 1rem;" [ibmButton]="ibmButton" disabled
+        title="this page is the first page">загрузка...</button>
 </div>
 
 <button style="margin-top: 1rem;" *ngIf="!isFormShown" (click)="showForm()" [ibmButton]="ibmButton">Добавить матч</button>
-
